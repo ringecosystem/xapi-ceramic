@@ -1,0 +1,9 @@
+type OrmpSignature @createModel(accountRelation: LIST, description: "Signature for ORMP message hash") {
+  timestamp: String! @string(minLength: 10, maxLength: 15)
+  channel: String! @string(minLength: 20, maxLength: 50)
+  executionCall: String! @string(minLength: 2, maxLength: 5000)
+  msgIndex: String! @string(minLength: 1, maxLength: 15)
+  signature: String! @string(minLength: 2, maxLength: 5000)
+  signer: String! @string(minLength: 2, maxLength: 50)
+  srcChainId: String! @string(minLength: 1, maxLength: 15)
+}
